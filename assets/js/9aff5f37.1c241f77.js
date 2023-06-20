@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[479],{3891:e=>{e.exports=JSON.parse('{"sourceUrl":"https://github.com/AmberGraceSoftware/Dec/blob/master","baseUrl":"/Dec/","classOrder":[],"apiCategories":[]}')}}]);
