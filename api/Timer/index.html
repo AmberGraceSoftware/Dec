@@ -20,8 +20,8 @@ Includes utility methods for mapping this &quot;remaining time&quot; value into 
 complex animationed sequences.
 
 *(Constructed via [Dec.Timer])*"><link data-rh="true" rel="canonical" href="https://dec.ambergracesoftware.com/api/Timer"><link data-rh="true" rel="alternate" href="https://dec.ambergracesoftware.com/api/Timer" hreflang="en"><link data-rh="true" rel="alternate" href="https://dec.ambergracesoftware.com/api/Timer" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.d68860a6.css">
-<link rel="preload" href="/assets/js/runtime~main.32fd0fe9.js" as="script">
-<link rel="preload" href="/assets/js/main.a48a2253.js" as="script">
+<link rel="preload" href="/assets/js/runtime~main.0ee97c9d.js" as="script">
+<link rel="preload" href="/assets/js/main.9fa65f20.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -36,9 +36,7 @@ complex animationed sequences.
   complex animationed sequences.
 </p>
 <p><em>(Constructed via <a href="/api/Dec#Timer">Dec.Timer</a>)</em></p>
-</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="SetDuration"><code style="text-decoration:none">SetDuration</code><a href="#SetDuration" class="hash-link" aria-label="Direct link to SetDuration" title="Direct link to SetDuration">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/AmberGraceSoftware/Dec/blob/master/src/Observables/Timer.luau#L67"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Timer<!-- -->:</code><code class="green_DgR4">SetDuration</code><code>(</code><code>duration<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code>(</code><code>)</code></div><div>
-<p>Sets the duration of the Timer.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Start"><code style="text-decoration:none">Start</code><a href="#Start" class="hash-link" aria-label="Direct link to Start" title="Direct link to Start">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/AmberGraceSoftware/Dec/blob/master/src/Observables/BaseTimer.luau#L23"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Timer<!-- -->:</code><code class="green_DgR4">Start</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Start"><code style="text-decoration:none">Start</code><a href="#Start" class="hash-link" aria-label="Direct link to Start" title="Direct link to Start">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/AmberGraceSoftware/Dec/blob/master/src/Observables/BaseTimer.luau#L23"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Timer<!-- -->:</code><code class="green_DgR4">Start</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>
   Starts the Timer Observable. The observable will update with new
   values every heartbeat in real-time until it is stopped.
@@ -61,25 +59,10 @@ complex animationed sequences.
   (maps to 0) and ends at endTime (maps to 1).
 </p>
 <p>Useful for slicing up animation sequences into smaller slices.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="SetDuration"><code style="text-decoration:none">SetDuration</code><a href="#SetDuration" class="hash-link" aria-label="Direct link to SetDuration" title="Direct link to SetDuration">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/AmberGraceSoftware/Dec/blob/master/src/Observables/Timer.luau#L67"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Timer<!-- -->:</code><code class="green_DgR4">SetDuration</code><code>(</code><code>duration<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Sets the duration of the Timer.</p>
 </div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
     &quot;functions&quot;: [
-        {
-            &quot;name&quot;: &quot;SetDuration&quot;,
-            &quot;desc&quot;: &quot;Sets the duration of the Timer.&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;duration&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                }
-            ],
-            &quot;returns&quot;: [],
-            &quot;function_type&quot;: &quot;method&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 67,
-                &quot;path&quot;: &quot;src/Observables/Timer.luau&quot;
-            }
-        },
         {
             &quot;name&quot;: &quot;Start&quot;,
             &quot;desc&quot;: &quot;Starts the Timer Observable. The observable will update with new\nvalues every heartbeat in real-time until it is stopped.&quot;,
@@ -155,6 +138,23 @@ complex animationed sequences.
                 &quot;line&quot;: 157,
                 &quot;path&quot;: &quot;src/Observables/BaseTimer.luau&quot;
             }
+        },
+        {
+            &quot;name&quot;: &quot;SetDuration&quot;,
+            &quot;desc&quot;: &quot;Sets the duration of the Timer.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;duration&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 67,
+                &quot;path&quot;: &quot;src/Observables/Timer.luau&quot;
+            }
         }
     ],
     &quot;properties&quot;: [],
@@ -169,7 +169,7 @@ complex animationed sequences.
         &quot;path&quot;: &quot;src/Observables/Timer.luau&quot;
     }
 }</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#CurvedAlpha" class="table-of-contents__link toc-highlight">:CurvedAlpha</a></li><li><a href="#Pause" class="table-of-contents__link toc-highlight">:Pause</a></li><li><a href="#Pause" class="table-of-contents__link toc-highlight">:Pause</a></li><li><a href="#SetDuration" class="table-of-contents__link toc-highlight">:SetDuration</a></li><li><a href="#SliceAlpha" class="table-of-contents__link toc-highlight">:SliceAlpha</a></li><li><a href="#Start" class="table-of-contents__link toc-highlight">:Start</a></li><li><a href="#Stop" class="table-of-contents__link toc-highlight">:Stop</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 AmberGraceSoftware. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
-<script src="/assets/js/runtime~main.32fd0fe9.js"></script>
-<script src="/assets/js/main.a48a2253.js"></script>
+<script src="/assets/js/runtime~main.0ee97c9d.js"></script>
+<script src="/assets/js/main.9fa65f20.js"></script>
 </body>
 </html>

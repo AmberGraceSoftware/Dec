@@ -20,8 +20,8 @@ Includes utility methods for mapping this &quot;elapsed time&quot; value into mo
 complex animationed sequences.
 
 *(Constructed via [Dec.Stopwatch])*"><link data-rh="true" rel="canonical" href="https://dec.ambergracesoftware.com/api/Stopwatch"><link data-rh="true" rel="alternate" href="https://dec.ambergracesoftware.com/api/Stopwatch" hreflang="en"><link data-rh="true" rel="alternate" href="https://dec.ambergracesoftware.com/api/Stopwatch" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.d68860a6.css">
-<link rel="preload" href="/assets/js/runtime~main.32fd0fe9.js" as="script">
-<link rel="preload" href="/assets/js/main.a48a2253.js" as="script">
+<link rel="preload" href="/assets/js/runtime~main.0ee97c9d.js" as="script">
+<link rel="preload" href="/assets/js/main.9fa65f20.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -36,17 +36,7 @@ complex animationed sequences.
   complex animationed sequences.
 </p>
 <p><em>(Constructed via <a href="/api/Dec#Stopwatch">Dec.Stopwatch</a>)</em></p>
-</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Alpha"><code style="text-decoration:none">Alpha</code><a href="#Alpha" class="hash-link" aria-label="Direct link to Alpha" title="Direct link to Alpha">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/AmberGraceSoftware/Dec/blob/master/src/Observables/Timer.luau#L56"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Stopwatch<!-- -->:</code><code class="green_DgR4">Alpha</code><code>(</code><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/api/Alpha">Alpha</a></code></div><div>
-<p>
-  Derives an Alpha observable object that maps the current remaining time from
-  0 (start) to 1 (finish)
-</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Lerp"><code style="text-decoration:none">Lerp</code><a href="#Lerp" class="hash-link" aria-label="Direct link to Lerp" title="Direct link to Lerp">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/AmberGraceSoftware/Dec/blob/master/src/Observables/Timer.luau#L79"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Stopwatch<!-- -->:</code><code class="green_DgR4">Lerp</code><code>(</code><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/api/Observable">Observable</a></code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">T</code><code class="op_lSLc">&gt;</code></div><div>
-<p>
-  Creates an observable that outputs an interpolated value between
-  the start value and end value based on the current remaining time.
-</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Start"><code style="text-decoration:none">Start</code><a href="#Start" class="hash-link" aria-label="Direct link to Start" title="Direct link to Start">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/AmberGraceSoftware/Dec/blob/master/src/Observables/BaseTimer.luau#L17"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Stopwatch<!-- -->:</code><code class="green_DgR4">Start</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Start"><code style="text-decoration:none">Start</code><a href="#Start" class="hash-link" aria-label="Direct link to Start" title="Direct link to Start">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/AmberGraceSoftware/Dec/blob/master/src/Observables/BaseTimer.luau#L17"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Stopwatch<!-- -->:</code><code class="green_DgR4">Start</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>
   Starts the Stopwatch Observable. The observable will update with new
   values every heartbeat in real-time until it is stopped.
@@ -69,6 +59,16 @@ complex animationed sequences.
   (maps to 0) and ends at endTime (maps to 1).
 </p>
 <p>Useful for slicing up animation sequences into smaller slices.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Alpha"><code style="text-decoration:none">Alpha</code><a href="#Alpha" class="hash-link" aria-label="Direct link to Alpha" title="Direct link to Alpha">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/AmberGraceSoftware/Dec/blob/master/src/Observables/Timer.luau#L56"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Stopwatch<!-- -->:</code><code class="green_DgR4">Alpha</code><code>(</code><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/api/Alpha">Alpha</a></code></div><div>
+<p>
+  Derives an Alpha observable object that maps the current remaining time from
+  0 (start) to 1 (finish)
+</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Lerp"><code style="text-decoration:none">Lerp</code><a href="#Lerp" class="hash-link" aria-label="Direct link to Lerp" title="Direct link to Lerp">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/AmberGraceSoftware/Dec/blob/master/src/Observables/Timer.luau#L79"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Stopwatch<!-- -->:</code><code class="green_DgR4">Lerp</code><code>(</code><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/api/Observable">Observable</a></code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">T</code><code class="op_lSLc">&gt;</code></div><div>
+<p>
+  Creates an observable that outputs an interpolated value between
+  the start value and end value based on the current remaining time.
+</p>
 </div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Alpha"><code style="text-decoration:none">Alpha</code><a href="#Alpha" class="hash-link" aria-label="Direct link to Alpha" title="Direct link to Alpha">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/AmberGraceSoftware/Dec/blob/master/src/Observables/Stopwatch.luau#L56"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Stopwatch<!-- -->:</code><code class="green_DgR4">Alpha</code><code>(</code><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/api/Alpha">Alpha</a></code></div><div>
 <p>
   Derives an Alpha observable object that maps the elasped time from 0 (start)
@@ -81,38 +81,6 @@ complex animationed sequences.
 </p>
 </div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
     &quot;functions&quot;: [
-        {
-            &quot;name&quot;: &quot;Alpha&quot;,
-            &quot;desc&quot;: &quot;Derives an Alpha observable object that maps the current remaining time from\n0 (start) to 1 (finish)&quot;,
-            &quot;params&quot;: [],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;Alpha&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;method&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 56,
-                &quot;path&quot;: &quot;src/Observables/Timer.luau&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;Lerp&quot;,
-            &quot;desc&quot;: &quot;Creates an observable that outputs an interpolated value between\nthe start value and end value based on the current remaining time.&quot;,
-            &quot;params&quot;: [],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;Observable&lt;T&gt;&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;method&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 79,
-                &quot;path&quot;: &quot;src/Observables/Timer.luau&quot;
-            }
-        },
         {
             &quot;name&quot;: &quot;Start&quot;,
             &quot;desc&quot;: &quot;Starts the Stopwatch Observable. The observable will update with new\nvalues every heartbeat in real-time until it is stopped.&quot;,
@@ -191,6 +159,38 @@ complex animationed sequences.
         },
         {
             &quot;name&quot;: &quot;Alpha&quot;,
+            &quot;desc&quot;: &quot;Derives an Alpha observable object that maps the current remaining time from\n0 (start) to 1 (finish)&quot;,
+            &quot;params&quot;: [],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Alpha&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 56,
+                &quot;path&quot;: &quot;src/Observables/Timer.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;Lerp&quot;,
+            &quot;desc&quot;: &quot;Creates an observable that outputs an interpolated value between\nthe start value and end value based on the current remaining time.&quot;,
+            &quot;params&quot;: [],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Observable&lt;T&gt;&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 79,
+                &quot;path&quot;: &quot;src/Observables/Timer.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;Alpha&quot;,
             &quot;desc&quot;: &quot;Derives an Alpha observable object that maps the elasped time from 0 (start)\nto 1 (finish)&quot;,
             &quot;params&quot;: [],
             &quot;returns&quot;: [
@@ -234,7 +234,7 @@ complex animationed sequences.
         &quot;path&quot;: &quot;src/Observables/Stopwatch.luau&quot;
     }
 }</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#Alpha" class="table-of-contents__link toc-highlight">:Alpha</a></li><li><a href="#Alpha" class="table-of-contents__link toc-highlight">:Alpha</a></li><li><a href="#CurvedAlpha" class="table-of-contents__link toc-highlight">:CurvedAlpha</a></li><li><a href="#Lerp" class="table-of-contents__link toc-highlight">:Lerp</a></li><li><a href="#Lerp" class="table-of-contents__link toc-highlight">:Lerp</a></li><li><a href="#Pause" class="table-of-contents__link toc-highlight">:Pause</a></li><li><a href="#Pause" class="table-of-contents__link toc-highlight">:Pause</a></li><li><a href="#SliceAlpha" class="table-of-contents__link toc-highlight">:SliceAlpha</a></li><li><a href="#Start" class="table-of-contents__link toc-highlight">:Start</a></li><li><a href="#Stop" class="table-of-contents__link toc-highlight">:Stop</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 AmberGraceSoftware. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
-<script src="/assets/js/runtime~main.32fd0fe9.js"></script>
-<script src="/assets/js/main.a48a2253.js"></script>
+<script src="/assets/js/runtime~main.0ee97c9d.js"></script>
+<script src="/assets/js/main.9fa65f20.js"></script>
 </body>
 </html>
