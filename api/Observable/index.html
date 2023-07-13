@@ -25,9 +25,9 @@ An observable will automatically be garbage collected so long as there are
 no listeners are currently subscribed to it, and it is not currently being
 used by a mounted VirtualInstance.
 
-*(Constructed via [Dec.CustomObservable])*"><link data-rh="true" rel="canonical" href="https://dec.ambergracesoftware.com/api/Observable"><link data-rh="true" rel="alternate" href="https://dec.ambergracesoftware.com/api/Observable" hreflang="en"><link data-rh="true" rel="alternate" href="https://dec.ambergracesoftware.com/api/Observable" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.d68860a6.css">
-<link rel="preload" href="/assets/js/runtime~main.3f444077.js" as="script">
-<link rel="preload" href="/assets/js/main.eb04f79d.js" as="script">
+*(Constructed via [Dec.CustomObservable])*"><link data-rh="true" rel="canonical" href="https://dec.ambergracesoftware.com/api/Observable"><link data-rh="true" rel="alternate" href="https://dec.ambergracesoftware.com/api/Observable" hreflang="en"><link data-rh="true" rel="alternate" href="https://dec.ambergracesoftware.com/api/Observable" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.ed7110f7.css">
+<link rel="preload" href="/assets/js/runtime~main.4a487484.js" as="script">
+<link rel="preload" href="/assets/js/main.e8a71b8b.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -57,9 +57,9 @@ used by a mounted VirtualInstance.
 </div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Subscribe"><code style="text-decoration:none">Subscribe</code><a href="#Subscribe" class="hash-link" aria-label="Direct link to Subscribe" title="Direct link to Subscribe">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/AmberGraceSoftware/Dec/blob/master/src/Observables/Observable.luau#L142"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Observable<!-- -->:</code><code class="green_DgR4">Subscribe</code><code>(</code><div class="inset_uKQm"><div><code>listener<!-- -->: </code><code class="purple_ieR2">(</code><code>value<!-- -->: </code><code class="blue_P4bS">T</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code>,</code></div><div><code>immediatelyCallListener<!-- -->: </code><code class="blue_P4bS">boolean?</code></div></div><code>) → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code></div><div>
 <p>
   Subscribes to changes in the Observable. Returns a function that, when
-  called, will unsubscribe the callback from the Observable updates. If <code>true</code>
-  is provided as a second argument, will also call the callback once
-  immediately with the current value.
+  called, will unsubscribe the listener from the Observable's changes. If
+  <code>true</code> is provided as a second argument, will also call the listener once
+  immediately with the current value of the Observable.
 </p>
 <div class="admonition admonition-caution alert alert--warning">
   <div class="admonition-heading">
@@ -79,8 +79,8 @@ used by a mounted VirtualInstance.
     <pre class="language-lua"><code class="language-lua"><span class="token comment">-- A new Observable can always be garbage collected if dereferenced</span>
 <span class="token keyword">local</span> coins <span class="token operator">=</span> <span class="token function">createCoinsObserver</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-<span class="token comment">-- However, once we subscribe to it, it will stick around in memory until</span>
-<span class="token comment">-- we call Unsubscribe!</span>
+<span class="token comment">-- However, once we subscribe to it, it will stick</span>
+<span class="token comment">-- around in memory until we call Unsubscribe!</span>
 <span class="token keyword">local</span> unsubscribe <span class="token operator">=</span> coins<span class="token punctuation">:</span><span class="token function">Subscribe</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
     <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Coins is"</span><span class="token punctuation">,</span> value<span class="token punctuation">)</span>
 <span class="token keyword">end</span><span class="token punctuation">,</span> <span class="token keyword">true</span><span class="token punctuation">)</span>
@@ -138,7 +138,7 @@ task<span class="token punctuation">.</span><span class="token function">wait</s
         },
         {
             &quot;name&quot;: &quot;Subscribe&quot;,
-            &quot;desc&quot;: &quot;Subscribes to changes in the Observable. Returns a function that, when\ncalled, will unsubscribe the callback from the Observable updates. If `true`\nis provided as a second argument, will also call the callback once\nimmediately with the current value.\n\n:::caution\nMake sure you handle the returned \&quot;Unsubscribe\&quot; function whenever a calling\n`Subscribe`! If you forget to do this, you may encounter memory leaks!\n\nObservables will remain in memory until all listeners are unsubscribed, and\nall VirtualInstances using it are unmounted\n```lua\n-- A new Observable can always be garbage collected if dereferenced\nlocal coins = createCoinsObserver()\n\n-- However, once we subscribe to it, it will stick around in memory until\n-- we call Unsubscribe!\nlocal unsubscribe = coins:Subscribe(function(value)\n    print(\&quot;Coins is\&quot;, value)\nend, true)\ntask.wait(5)\n\n-- The \&quot;coins\&quot; observable can now be garbage collected\nunsubscribe() \n```\n:::&quot;,
+            &quot;desc&quot;: &quot;Subscribes to changes in the Observable. Returns a function that, when\ncalled, will unsubscribe the listener from the Observable&#x27;s changes. If\n`true` is provided as a second argument, will also call the listener once\nimmediately with the current value of the Observable.\n\n:::caution\nMake sure you handle the returned \&quot;Unsubscribe\&quot; function whenever a calling\n`Subscribe`! If you forget to do this, you may encounter memory leaks!\n\nObservables will remain in memory until all listeners are unsubscribed, and\nall VirtualInstances using it are unmounted\n```lua\n-- A new Observable can always be garbage collected if dereferenced\nlocal coins = createCoinsObserver()\n\n-- However, once we subscribe to it, it will stick\n-- around in memory until we call Unsubscribe!\nlocal unsubscribe = coins:Subscribe(function(value)\n    print(\&quot;Coins is\&quot;, value)\nend, true)\ntask.wait(5)\n\n-- The \&quot;coins\&quot; observable can now be garbage collected\nunsubscribe() \n```\n:::&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;listener&quot;,
@@ -183,8 +183,8 @@ task<span class="token punctuation">.</span><span class="token function">wait</s
         &quot;line&quot;: 25,
         &quot;path&quot;: &quot;src/Observables/Observable.luau&quot;
     }
-}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#Current" class="table-of-contents__link toc-highlight">:Current</a></li><li><a href="#Destroy" class="table-of-contents__link toc-highlight">:Destroy</a></li><li><a href="#Map" class="table-of-contents__link toc-highlight">:Map</a></li><li><a href="#Subscribe" class="table-of-contents__link toc-highlight">:Subscribe</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 AmberGraceSoftware. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
-<script src="/assets/js/runtime~main.3f444077.js"></script>
-<script src="/assets/js/main.eb04f79d.js"></script>
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#Current" class="table-of-contents__link toc-highlight">:Current</a></li><li><a href="#Destroy" class="table-of-contents__link toc-highlight">:Destroy</a></li><li><a href="#Map" class="table-of-contents__link toc-highlight">:Map</a></li><li><a href="#Subscribe" class="table-of-contents__link toc-highlight">:Subscribe</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Written by Amber Grace. Built with Moonwave and Docusaurus</div></div></div></footer></div>
+<script src="/assets/js/runtime~main.4a487484.js"></script>
+<script src="/assets/js/main.e8a71b8b.js"></script>
 </body>
 </html>

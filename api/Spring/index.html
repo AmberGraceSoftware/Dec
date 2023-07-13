@@ -13,9 +13,9 @@ another observable&#x27;s current value
 Observable object which simulates critically damped spring easing towards
 another observable&#x27;s current value
 
-*(Constructed via [Dec.Spring])*"><link data-rh="true" rel="canonical" href="https://dec.ambergracesoftware.com/api/Spring"><link data-rh="true" rel="alternate" href="https://dec.ambergracesoftware.com/api/Spring" hreflang="en"><link data-rh="true" rel="alternate" href="https://dec.ambergracesoftware.com/api/Spring" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.d68860a6.css">
-<link rel="preload" href="/assets/js/runtime~main.3f444077.js" as="script">
-<link rel="preload" href="/assets/js/main.eb04f79d.js" as="script">
+*(Constructed via [Dec.Spring])*"><link data-rh="true" rel="canonical" href="https://dec.ambergracesoftware.com/api/Spring"><link data-rh="true" rel="alternate" href="https://dec.ambergracesoftware.com/api/Spring" hreflang="en"><link data-rh="true" rel="alternate" href="https://dec.ambergracesoftware.com/api/Spring" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.ed7110f7.css">
+<link rel="preload" href="/assets/js/runtime~main.4a487484.js" as="script">
+<link rel="preload" href="/assets/js/main.e8a71b8b.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -26,8 +26,54 @@ another observable&#x27;s current value
   another observable's current value
 </p>
 <p><em>(Constructed via <a href="/api/Dec#Spring">Dec.Spring</a>)</em></p>
-</div></header></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
-    &quot;functions&quot;: [],
+</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ResetVelocity"><code style="text-decoration:none">ResetVelocity</code><a href="#ResetVelocity" class="hash-link" aria-label="Direct link to ResetVelocity" title="Direct link to ResetVelocity">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/AmberGraceSoftware/Dec/blob/master/src/Observables/EasedObject.luau#L134"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Spring<!-- -->:</code><code class="green_DgR4">ResetVelocity</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>
+  Sets the velocity of the spring to the zero (or the origin vector). Useful
+  in conjunction with <a href="/api/Spring#SetPosition">Spring:SetPosition</a>
+</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="CurrentTarget"><code style="text-decoration:none">CurrentTarget</code><a href="#CurrentTarget" class="hash-link" aria-label="Direct link to CurrentTarget" title="Direct link to CurrentTarget">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/AmberGraceSoftware/Dec/blob/master/src/Observables/EasedObject.luau#L158"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Spring<!-- -->:</code><code class="green_DgR4">CurrentTarget</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Gets the current value of the spring's target observable.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="SetPosition"><code style="text-decoration:none">SetPosition</code><a href="#SetPosition" class="hash-link" aria-label="Direct link to SetPosition" title="Direct link to SetPosition">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/AmberGraceSoftware/Dec/blob/master/src/Observables/EasedObject.luau#L186"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Spring<!-- -->:</code><code class="green_DgR4">SetPosition</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>
+  Moves the current position of the spring to a new value, keeping the current
+  velocity intact.
+</p>
+</div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
+    &quot;functions&quot;: [
+        {
+            &quot;name&quot;: &quot;ResetVelocity&quot;,
+            &quot;desc&quot;: &quot;Sets the velocity of the spring to the zero (or the origin vector). Useful\nin conjunction with [Spring:SetPosition]&quot;,
+            &quot;params&quot;: [],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 134,
+                &quot;path&quot;: &quot;src/Observables/EasedObject.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;CurrentTarget&quot;,
+            &quot;desc&quot;: &quot;Gets the current value of the spring&#x27;s target observable.&quot;,
+            &quot;params&quot;: [],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 158,
+                &quot;path&quot;: &quot;src/Observables/EasedObject.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;SetPosition&quot;,
+            &quot;desc&quot;: &quot;Moves the current position of the spring to a new value, keeping the current\nvelocity intact.&quot;,
+            &quot;params&quot;: [],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 186,
+                &quot;path&quot;: &quot;src/Observables/EasedObject.luau&quot;
+            }
+        }
+    ],
     &quot;properties&quot;: [],
     &quot;types&quot;: [],
     &quot;name&quot;: &quot;Spring&quot;,
@@ -39,8 +85,8 @@ another observable&#x27;s current value
         &quot;line&quot;: 131,
         &quot;path&quot;: &quot;src/Observables/Spring.luau&quot;
     }
-}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 AmberGraceSoftware. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
-<script src="/assets/js/runtime~main.3f444077.js"></script>
-<script src="/assets/js/main.eb04f79d.js"></script>
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#CurrentTarget" class="table-of-contents__link toc-highlight">:CurrentTarget</a></li><li><a href="#ResetVelocity" class="table-of-contents__link toc-highlight">:ResetVelocity</a></li><li><a href="#SetPosition" class="table-of-contents__link toc-highlight">:SetPosition</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Written by Amber Grace. Built with Moonwave and Docusaurus</div></div></div></footer></div>
+<script src="/assets/js/runtime~main.4a487484.js"></script>
+<script src="/assets/js/main.e8a71b8b.js"></script>
 </body>
 </html>
